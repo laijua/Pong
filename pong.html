@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <style>
+        @import url(style.css);
+
+        p.highlight {
+            color: red;
+        }
+
+        svg {
+            background-color: rgb(41, 41, 36);
+        }
+
+
+        .key {
+    width:18px;
+    text-align:center;
+    border-radius:3px;
+    background-color:lightgray;
+  }
+  .highlight {
+    background-color:pink;
+  }
+  div#controls {
+      float: right;
+      margin: 50px;
+  }
+        
+    </style>
+    <script src="./dist/pong.js"></script>
+</head>
+
+
+
+
+<body>
+    <h1>Pong</h1>
+    <svg id="canvas" width="600" height="600">
+        <g id="player" transform="translate(565,282.5)">
+            <rect width="10" height="35" style="fill:rgb(0,0,255);" rect />
+        </g>
+
+        <g id="bot" transform="translate(20,282.5)">
+            <rect width="10" height="35" style="fill:rgb(255,0,0);" rect />
+        </g>
+        <!-- stroke-width:3;stroke:rgb(0,0,0) -->
+        <g id="ball" transform="translate(295,295)">
+            <rect width="10" height="10" style="fill:rgb(255,255,255)" rect />
+        </g>
+
+        <g>
+            <text id="botscore" x="100" y="110" font-size="5em" fill="white">0</text>
+        </g>
+
+        <g>
+            <text id="playerscore" x="470" y="110" font-size="5em" fill="white">0</text>
+        </g>
+
+        <g>
+            <text id="winText" x="130" y="200" font-size="5em" fill="white"></text>
+        </g>
+
+        <g>
+            <line x1="300" y1="0" x2="300" y2="600" stroke="white"
+          stroke-dasharray="4" />
+        </g>
+    </svg>
+
+    <div id="controls">
+        <h2>Controls:</h2>
+        <table>
+            <!-- <tr><td>Thrust</td><td>Up Arrow</td></tr> -->
+            <text>Move to start game.</text>
+            <tr><td>Move Up</td><td><div id="ArrowUp" class="key">&#8679;</div></td></tr>
+            <tr><td>Move Down</td><td><div id="ArrowDown" class="key">&#8681;</div></td></tr>
+            <!-- <tr><td>Fire</td><td>Space</td>
+            <tr><td>Restart Game</td><td>F5</td></tr> -->
+        </table>
+        </div>
+
+
+
+
+
+</body>
+
+</html>
